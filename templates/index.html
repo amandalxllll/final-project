@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amazing app to help you find the nearest MBTA station</title>
+    <title>Amazing app to help you find the portfolio return</title>
     <style>
         h1{
             text-align: center;
@@ -31,38 +31,23 @@
 
   <body>
     <h1>
-      Hi!!! Want to learn about your investment portfolio return?
-      This is an app to a get quick return of your stock portfolio!
-    </h1>
-    <h2>
-      Please enter the stock ticker symbol in your portfolio, purchase price, and the amount you invested in each stock
-    </h2>
-    <form action="/returnportfolio" method="post">
-      <div class="field">
-        <label>
-          Please input your stock tickers: <br />
-          <input name="tickers_symbols[]" type="text" />
-          <input name="tickers_symbols[]" type="text" />
-          <input name="tickers_symbols[]" type="text" />
-        </label>
-        <br />
-        <label>
-          Please input your purchase prices: <br />
-          <input name="purchase_prices[]" type="number" />
-          <input name="purchase_prices[]" type="number" />
-          <input name="purchase_prices[]" type="number" />
-        </label>
-        <br />
-        <label>
-          Please input how many shares you bought for each stock: <br />
-          <input name="amount_invested[]" type="number" />
-          <input name="amount_invested[]" type="number" />
-          <input name="amount_invested[]" type="number" />
-        </label>
-      </div>
-      <div >
-        <input class="submit" type="submit" value="Submit" />
-      </div>
-    </form>
-  </body>
+        Hi!!!! Want to learn about your investment portfolio return? 
+        This is an app to a get quick return of your stock portfolio!
+      </h1>
+      <h2>
+        Please enter the stock ticker symbol in your portfolio, purchase price, and the amount you invested in each stock
+      </h2>
+      <h3>
+        E.g. AAPL MSFT
+      </h3>
+      <form action = '' method="post">
+      <label for = ''>
+        Ticker:<input type = 'text' name = 'tickers_symbols'>
+        Initial Investing Price (per stock unit):<input type = 'text' name = 'purchase_prices'>
+        Stock Unit Purchased:<input type = 'text' name = 'amount_invested'>
+      </label>
+      <button>Check Value Now</button>
+      </form>
+    
+</body>
 </html>
