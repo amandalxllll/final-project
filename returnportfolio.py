@@ -1,7 +1,15 @@
 from turtle import pd
 import yfinance as yf
 import numpy as np
-
+"""
+This program is designed to get overall return of the portfolio. In order to do that
+we'll need the following information:
+1. stock purchase price & current price
+2. unit stock purchased and purchasing price
+3. individual stock return
+4. individual stock weighted percentage inside the portfolio
+Then we can compute the total portfolio return using formula: R=w1r1+w2r2+...wnrn
+"""
 
 def get_tickers(tickers_symbols):
     """
@@ -13,6 +21,9 @@ def get_tickers(tickers_symbols):
 
 
 def get_current_prices(tickers_symbols):
+    """
+    Get the current price of the stock using ticker
+    """
     tickers = get_tickers(tickers_symbols)
     # print(tickers.tickers)
     prices = []
@@ -26,7 +37,8 @@ def get_current_prices(tickers_symbols):
 
 def stock_return(tickers_symbols, purchase_prices):
     """
-    Calculate the returns on a list of stock investments
+    Calculate the return on individual stock investments
+    using formula (market_price - purchase_prices) / purchase_prices
     """
     current_prices = get_current_prices(tickers_symbols)
     individual_returns = []
@@ -58,6 +70,9 @@ def calculate_portfolio_percentages(tickers_symbols, amount_invested):
 
 
 def get_portfolio_return(tickers_symbols,purchase_prices, amount_invested):
+    """
+    Geting the final portfolio return using formula: R=w1r1+w2r2+...wnrn
+    """
     percentage = calculate_portfolio_percentages(tickers_symbols, amount_invested)
     # print(percentage)
     individual_return = stock_return(tickers_symbols, purchase_prices)
